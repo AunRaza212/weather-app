@@ -1,7 +1,47 @@
 .App {
   text-align: center;
 }
+.weather-btn{
+  opacity: 20;
+  transition: 0.15s;
+  font-family: Arial;
+  font-weight: bold;
+}
+.sidebar{
+  font-weight: bold !important;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  cursor:pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 4px 8px;
+  margin: 10px 0px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow-y: unset;
+  
+  
+}
 
+.sidebar:hover{
+  background-color: #61dafb;
+  border: none;
+  opacity: 0.3;
+  transition: 1.8s;
+}
+.input-btn:hover{
+ cursor: pointer;
+ justify-content: center;
+}
+
+.weather {
+
+
+  font-weight: bold;
+ 
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
