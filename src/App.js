@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import NavBar from "./components/NavBar";
+import SearchBar from "./components/SearchBar";
 import Feed from "./components/Feed";
 import { Stack } from "@mui/material";
 import { ApiContext } from "./components/ApiContext";
@@ -10,7 +10,7 @@ function App() {
     <ApiContext>
     <BrowserRouter>
       <Stack whiteSpace="none">
-        <NavBar />
+        <SearchBar />
       </Stack>
       <Routes>
         <Route exact path="/" element={<Feed />} />

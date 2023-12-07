@@ -4,7 +4,7 @@ import { categories, sun } from "../utils/constants";
 const WeatherSingleInfo = ({ p, borderRight, time, temp, clouds }) => {
   return (
     <Stack mt={-5} spacing={{ xs: 1, sm: 2 }} 
-    sx={{ borderRight, p }}>
+    sx={{ borderRight, p:{lg:5,xs:3, md:3,sm:3} }}>
       <Box
         color="#9399a2"
         fontSize={16}

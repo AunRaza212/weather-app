@@ -2,7 +2,11 @@ import { Stack, Typography } from "@mui/material";
 import React from "react";
 import WeatherSingleInfo from "./WeatherSingleInfo";
 
-const TodaysForecast = () => {
+const TodaysForecast = ({ apiData }) => {
+  if (!apiData || !apiData.forecast || !apiData.forecast.forecastday) {
+    // Handle the case when data is not available
+    return <div>Loading123...</div>;
+  }
   return (
     <>
       <Stack
@@ -11,11 +15,12 @@ const TodaysForecast = () => {
           boxShadow: "none",
           borderRadius: 5,
         }}
-        gap='30px'
+        gap="30px"
+        direction='column'
+        display="flex"
+        justifyContent="center"
       >
-        
-
-        
+       
         <Typography
           fontSize={14}
           color="#9399a2"
@@ -23,14 +28,32 @@ const TodaysForecast = () => {
           variant="caption"
           display="flex"
           justifyContent="center"
+          ml='75px'
         >
           TODAY'S FORECAST
         </Typography>
-        
-        <Stack direction="row" display="flex" justifyContent="center">
-          <WeatherSingleInfo p={2} time="6:00 am" />
-          <WeatherSingleInfo p={2} time="9:00 am" />
-          <WeatherSingleInfo p={2} time="12:00 pm" />
+<Stack direction='row' >
+
+
+     
+          <WeatherSingleInfo
+
+            time="6:00 am"
+            clouds={apiData.forecast.forecastday[0].hour[6].condition.text}
+            temp={apiData.forecast.forecastday[0].hour[6].temp_c}
+          />
+          <WeatherSingleInfo
+          
+            time="9:00 am"
+            clouds={apiData.forecast.forecastday[0].hour[9].condition.text}
+            temp={apiData.forecast.forecastday[0].hour[9].temp_c}
+          />
+          <WeatherSingleInfo
+           
+            time="12:00 pm"
+            clouds={apiData.forecast.forecastday[0].hour[12].condition.text}
+            temp={apiData.forecast.forecastday[0].hour[12].temp_c}
+          />
         </Stack>
       </Stack>
     </>

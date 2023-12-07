@@ -10,7 +10,7 @@ export const ApiContext = ({ children }) => {
     useEffect(() => {
       const fetchDataFromAPI = async () => {
         try {
-          const data = await fetchData( 'forecast.json',{q:'Karachi'});
+          const data = await fetchData( 'forecast.json' ,{q:'Karachi'});
           setApiData(data);
         } catch (error) {
           console.error("Error fetching data from the API", error);

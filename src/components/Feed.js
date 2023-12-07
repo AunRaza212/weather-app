@@ -48,7 +48,7 @@ if (!apiData) {
        
       }}
     >
-      <SideBar setSelectedCategory={setSelectedCategory} />
+      <SideBar setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory} />
     </Box>
 
     {renderComponentByCategory()}

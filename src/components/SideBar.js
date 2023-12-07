@@ -2,7 +2,7 @@ import React from "react";
 import { Stack } from "@mui/material";
 import { categories } from "../utils/constants";
 
-const SideBar = ({ setSelectedCategory }) => {
+const SideBar = ({ setSelectedCategory,selectedCategory }) => {
   return (
     <Stack
     mt='19px'
@@ -22,7 +22,7 @@ const SideBar = ({ setSelectedCategory }) => {
       {categories.map((category) => (
         <button
           onClick={() => setSelectedCategory(category.name)}
-          className="sidebar sidebar:hover"
+          className={`sidebar sidebar:hover ${selectedCategory === category.name && 'active'  }` }
           key={category.name}
           style={{ fontFamily: "inherit", fontVariant: "unset" }}
         >

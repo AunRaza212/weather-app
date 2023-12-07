@@ -1,9 +1,30 @@
 import { Box, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { sun } from "../utils/constants";
+import {fetchData} from '../utils/fetchData'
+const CitiesInfo = ({city,temperature,time}) => {
+  // const [apiData, setApiData] = useState(null);
+  // const [cityy,setCityy]=useState('')
 
-const CitiesInfo = () => {
-  
+  // useEffect(() => {
+    
+  //   const fetchDataFromAPI = async () => {
+  //     try {
+  //       const data = await fetchData( 'forecast.json' ,{q:`${city}`});
+  //       setApiData(data);
+  //     } catch (error) {
+  //       console.error("Error fetching data from the API", error);
+  //     }
+  //   };
+
+  //   fetchDataFromAPI();
+  // // }, []);
+  // setCityy(city)
+  // if (!apiData || !apiData.location || !apiData.current) {
+  //   // Handle the case when data is not available
+  //   return <div>Loading...</div>;
+  // }
+ 
   return (
     <Stack
       direction="row"
@@ -39,17 +60,18 @@ const CitiesInfo = () => {
         src={sun}
       />
 
-      <Box sx={{ mt: "30px" }}>
+      <Box sx={{ mt: "30px",width:'130px' }}>
         <Typography
           color="#dde0e4ff"
           marginLeft="5px"
           fontSize="30px"
           fontWeight={600}
         >
-          Madrid
+          {city}
+          
         </Typography>
         <Typography fontFamily='Rubik' color="#9399a2" marginLeft="5px" fontSize="15px">
-          10:23
+        {time}
         </Typography>
       </Box>
       <Stack
@@ -62,7 +84,8 @@ const CitiesInfo = () => {
         color="#dde0e4ff"
         fontWeight="400"
       >
-        31
+{temperature}
+      
       </Stack>
     </Stack>
   );
