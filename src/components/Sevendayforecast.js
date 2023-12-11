@@ -8,11 +8,10 @@ const Sevendayforecast = ({ apiData }) => {
       direction="column"
       sx={{
         color: "white",
-        position:'absolute',
+       
         backgroundColor: "rgb(32,43,59)",
         borderRadius: 5,
-        left:'1175px',
-        top:'63px',
+       ml:'700px',
         width: "400px",
         height: "804px",
       }}

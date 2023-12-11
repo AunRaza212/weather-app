@@ -9,7 +9,7 @@ const SideBar = ({ setSelectedCategory,selectedCategory }) => {
       ml="13px"
       sx={{
         width: { lg: "68px", xs: "20px", md:'26px' },
-        height: { lg: "800px",xs:'710px' },
+        height: { lg: "800px",xs:'710px',sm:'728px', md:'726px' },
         gap: "10px",
         p: { lg: "10px", xs: "27px", md:'28px' },
         overflowY: 'clip',
