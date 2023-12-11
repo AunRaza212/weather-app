@@ -17,7 +17,7 @@ const Map = () => {
         borderRadius: "16px",
       }}
     >
-      <img src="https://assets.api.uizard.io/api/cdn/stream/0c363d67-846f-41b5-9ccb-6261c602667e" />
+      <img src="https://assets.api.uizard.io/api/cdn/stream/0c363d67-846f-41b5-9ccb-6261c602667e" alt="map"/>
       <Stack
         direction="column"
         p={3}

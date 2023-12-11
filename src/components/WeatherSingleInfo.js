@@ -1,5 +1,5 @@
 import { Box, Stack } from "@mui/material";
-const WeatherSingleInfo = ({ p, borderRight, time, temp, clouds }) => {
+const WeatherSingleInfo = ({  borderRight, time, temp, clouds }) => {
   return (
     <Stack
       mt={-5}

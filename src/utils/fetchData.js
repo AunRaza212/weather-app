@@ -1,20 +1,4 @@
 
-// import axios from 'axios'
-// const BASE_URL= 'https://weatherbit-v1-mashape.p.rapidapi.com/forecast'
-
-
-
-
-
-
- 
-//   export const fetchData = async (url)=>{ 
-
-//     const {data}= await axios.get(`${BASE_URL}/${url}`, weathers);
-//     return data;
-//   }
-// //this function will feth the data
-
 import axios from 'axios';
 
 export const BASE_URL = 'https://weatherapi-com.p.rapidapi.com';
