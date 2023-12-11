@@ -1,29 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
 import { sun } from "../utils/constants";
-import {fetchData} from '../utils/fetchData'
 const CitiesInfo = ({city,temperature,time}) => {
-  // const [apiData, setApiData] = useState(null);
-  // const [cityy,setCityy]=useState('')
-
-  // useEffect(() => {
-    
-  //   const fetchDataFromAPI = async () => {
-  //     try {
-  //       const data = await fetchData( 'forecast.json' ,{q:`${city}`});
-  //       setApiData(data);
-  //     } catch (error) {
-  //       console.error("Error fetching data from the API", error);
-  //     }
-  //   };
-
-  //   fetchDataFromAPI();
-  // // }, []);
-  // setCityy(city)
-  // if (!apiData || !apiData.location || !apiData.current) {
-  //   // Handle the case when data is not available
-  //   return <div>Loading...</div>;
-  // }
  
   return (
     <Stack
@@ -64,7 +41,7 @@ const CitiesInfo = ({city,temperature,time}) => {
         <Typography
           color="#dde0e4ff"
           marginLeft="5px"
-          fontSize="30px"
+          fontSize="20px"
           fontWeight={600}
         >
           {city}
@@ -75,16 +52,27 @@ const CitiesInfo = ({city,temperature,time}) => {
         </Typography>
       </Box>
       <Stack
-        width="792px"
-        fontSize="40px"
+        sx={{ width: {
+          md: "320px",
+          sm: "414px",
+          xs: "317px",
+          lg: "792px",
+         
+
+        }, fontSize:{ md: "30px",
+        sm: "25px",
+        xs: '25px',
+        lg: "30px",
+        }}}
+        fontSize="30px"
         fontFamily="Rubik"
         direction="column"
         alignItems="flex-end"
-        alignSelf="start"
+      
         color="#dde0e4ff"
         fontWeight="400"
       >
-{temperature}
+{temperature}°C
       
       </Stack>
     </Stack>

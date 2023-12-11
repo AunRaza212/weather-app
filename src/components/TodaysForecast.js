@@ -32,7 +32,7 @@ const TodaysForecast = ({ apiData }) => {
         >
           TODAY'S FORECAST
         </Typography>
-<Stack direction='row' >
+<Stack direction='row' width='600px' >
 
 
      

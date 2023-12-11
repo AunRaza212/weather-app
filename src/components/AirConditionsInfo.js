@@ -1,32 +1,5 @@
-// const WeatherStack = ({ iconName, label }) => {
-//   const [weatherData, setWeatherData] = useState(null);
-//   const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState(null);
-
-//   useEffect(() => {
-//     const fetchDataFromApi = async () => {
-//       try {
-//         const data = await fetchData("forecast/3hourly", {
-//           lat: "35.5",
-//           lon: "-78.5",
-//         });
-//         setWeatherData(data);
-//       } catch (error) {
-//         setError("Error fetching data from the API");
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchDataFromApi();
-//   }, []);
-
-import { Box, Grid, Paper, Stack, Typography } from "@mui/material";
-import React, { createContext, useEffect, useState } from "react";
+import { Box, Grid,  Stack, Typography } from "@mui/material";
 import { icons } from "../utils/constants";
-import { fetchData } from "../utils/fetchData";
-import { ApiContext } from "./ApiContext";
-
 
 const AirConditionsInfo = ({apiData}) => {
   if (!apiData || !apiData.current) {

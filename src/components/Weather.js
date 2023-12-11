@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
 import "../App.css";
 import { Box, Stack, Typography } from "@mui/material";
 import Sevendayforecast from "./Sevendayforecast";
 import AirConditionsCard from "./AirConditionsCard";
 import WeatherCard from "./WeatherCard";
-import { fetchData } from "../utils/fetchData";
-
 
 
 

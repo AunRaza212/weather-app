@@ -1,7 +1,6 @@
 import React from "react";
-import { Stack, Typography, styled } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import WeatherSingleInfo from "./WeatherSingleInfo";
-import { ApiContext, useApiData } from "./ApiContext";
 const WeatherCard = ({ apiData }) => {
   if (!apiData || !apiData.forecast || !apiData.forecast.forecastday) {
     // Handle the case when data is not available

@@ -1,10 +1,11 @@
 import { Box, Stack } from "@mui/material";
-import CloudIcon from "@mui/icons-material/Cloud";
-import { categories, sun } from "../utils/constants";
 const WeatherSingleInfo = ({ p, borderRight, time, temp, clouds }) => {
   return (
-    <Stack mt={-5} spacing={{ xs: 1, sm: 2 }} 
-    sx={{ borderRight, p:{lg:5,xs:3, md:3,sm:3} }}>
+    <Stack
+      mt={-5}
+      spacing={{ xs: 1, sm: 2 }}
+      sx={{ borderRight, p: { lg: 5, xs: 3, md: 3, sm: 3 } }}
+    >
       <Box
         color="#9399a2"
         fontSize={16}
@@ -12,14 +13,14 @@ const WeatherSingleInfo = ({ p, borderRight, time, temp, clouds }) => {
         fontFamily="Rubik"
         display="flex"
         justifyContent="center"
-        
       >
         {time}
       </Box>
       <Box display="flex" justifyContent="center">
         {clouds === "Sunny" || "Clear" ? (
           <img
-src="https://assets.api.uizard.io/api/cdn/stream/e555eccb-fbe4-4a3c-8917-933a41798140.png"
+            src="https://assets.api.uizard.io/api/cdn/stream/e555eccb-fbe4-4a3c-8917-933a41798140.png"
+            alt="sun"
             style={{
               display: "flex",
               alignSelf: "center",
@@ -32,7 +33,7 @@ src="https://assets.api.uizard.io/api/cdn/stream/e555eccb-fbe4-4a3c-8917-933a417
             }}
           />
         ) : (
-          "default"
+          <img src="https://assets.api.uizard.io/api/cdn/stream/2c926953-f968-411a-af55-893c6c0d8901" alt="clouds" />
         )}
       </Box>
       <Box

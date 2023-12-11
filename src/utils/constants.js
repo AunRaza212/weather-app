@@ -3,7 +3,6 @@ import ThunderstormOutlinedIcon from '@mui/icons-material/ThunderstormOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
-import Cities from '../components/Cities';
 import DeviceThermostatIcon from '@mui/icons-material/DeviceThermostat';
 import AirIcon from '@mui/icons-material/Air';
 import OpacityIcon from '@mui/icons-material/Opacity';

@@ -1,10 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Box,  Stack } from "@mui/material";
 import SideBar from "./SideBar";
 import Cities from "./Cities";
 import Weather from "./Weather";
 import Settings from "./Settings";
 import { useApiData } from "./ApiContext";
+import Map from './Map'
 const Feed = () => {
 
   // const MainFeed =()=>
@@ -26,6 +27,8 @@ if (!apiData) {
         return <Cities apiData={apiData} />;
         case "Settings":
           return <Settings />;
+          case 'Map':
+            return <Map/>;
       case "":
         return <Weather apiData={apiData}/>;
         

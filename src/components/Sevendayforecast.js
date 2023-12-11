@@ -1,40 +1,20 @@
 import { Box, Stack, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
 import SevendayInfo from "./SevendayInfo";
-import { fetchData } from "../utils/fetchData";
 
-const Sevendayforecast = ({apiData}) => {
-  // const [apiData, setapiData] = useState("");
-  // const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState(null);
-  // useEffect(() => {
-  //   const fetchDataFromAPI = async () => {
-  //     try {
-  //       const data = await fetchData("forecast/daily", {
-  //         lat: `${Math.floor(Math.random() * 100) + 1}`,
-  //         lon: `${Math.floor(Math.random() * 100) - 1}`,
-  //       });
-  //       setapiData(data);
-  //     } catch (error) {
-  //       setError("Error fetching data from the API");
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchDataFromAPI();
-  // }, []);
+
+const Sevendayforecast = ({ apiData }) => {
   return (
     <Stack
       direction="column"
       sx={{
         color: "white",
+        position:'absolute',
         backgroundColor: "rgb(32,43,59)",
         borderRadius: 5,
-        ml: "700px",
+        left:'1175px',
+        top:'63px',
         width: "400px",
         height: "804px",
-      
-       
       }}
       p={2}
     >
@@ -43,15 +23,117 @@ const Sevendayforecast = ({apiData}) => {
           7-DAY FORECAST
         </Typography>
       </Box>
-      
+
       <Stack direction="column" gap="5px">
-        <SevendayInfo borderBottom={'1px solid #35455e'} p={4} date='Monday' />
-        <SevendayInfo borderBottom={'1px solid #35455e'} p={4} date='Tuesday' />
-        <SevendayInfo  borderBottom={'1px solid #35455e'} p={4} date='Wednesday' />
-        <SevendayInfo  borderBottom={'1px solid #35455e'}  p={4} date='Thursday'  />
-        <SevendayInfo borderBottom={'1px solid #35455e'}  p={4} date='Friday'  />
-        <SevendayInfo borderBottom={'1px solid #35455e'}  p={4} date='Saturday' />
-        <SevendayInfo borderBottom={'1px solid #35455e'}  p={4}  date='Sunday'  />
+        <SevendayInfo
+          borderBottom={"1px solid #35455e"}
+          p={3}
+          date="Monday"
+          sunny={
+            <img
+              src="https://assets.api.uizard.io/api/cdn/stream/e555eccb-fbe4-4a3c-8917-933a41798140.png"
+              alt="sun"
+              style={{
+                height: "50px",
+                width: "50px",
+              }}
+            />
+          }
+        />
+        <SevendayInfo
+          borderBottom={"1px solid #35455e"}
+          p={3}
+          date="Tuesday"
+          sunny={
+            <img
+              src="https://assets.api.uizard.io/api/cdn/stream/2c926953-f968-411a-af55-893c6c0d8901"
+              alt="clouds"
+              style={{
+                height: "40px",
+                width: "70px",
+                marginRight:'-10px'
+              }}
+            />
+          }
+        />
+        <SevendayInfo
+          borderBottom={"1px solid #35455e"}
+          p={3}
+          date="Wednesday"
+          sunny={
+            <img
+              src="https://assets.api.uizard.io/api/cdn/stream/e555eccb-fbe4-4a3c-8917-933a41798140.png"
+              alt="sun"
+              style={{
+                height: "50px",
+                width: "50px",
+              }}
+            />
+          }
+        />
+        <SevendayInfo
+          borderBottom={"1px solid #35455e"}
+          p={3}
+          date="Thursday"
+          sunny={
+            <img
+              src="https://assets.api.uizard.io/api/cdn/stream/e555eccb-fbe4-4a3c-8917-933a41798140.png"
+              alt="sun"
+              style={{
+                height: "50px",
+                width: "50px",
+              }}
+            />
+          }
+        />
+        <SevendayInfo
+          borderBottom={"1px solid #35455e"}
+          p={3}
+          date="Friday"
+          sunny={
+            <img
+              src="https://assets.api.uizard.io/api/cdn/stream/2c926953-f968-411a-af55-893c6c0d8901"
+              alt="clouds"
+              style={{
+                height: "40px",
+                width: "70px",
+                marginRight:'-10px'
+              }}
+            />
+          }
+        />
+        <SevendayInfo
+          borderBottom={"1px solid #35455e"}
+          p={3}
+          date="Saturday "
+          sunny={
+            <img
+              src="https://assets.api.uizard.io/api/cdn/stream/e555eccb-fbe4-4a3c-8917-933a41798140.png"
+              alt="sun"
+              style={{
+                height: "50px",
+                width: "50px",
+              }}
+            />
+          }
+        />
+        <SevendayInfo
+          borderBottom={"1px solid #35455e"}
+          p={3}
+          date="Sunday"
+          sunny={
+            <img
+              src="https://assets.api.uizard.io/api/cdn/stream/d12bc406-1c84-42b5-9f37-4d52460d0521"
+              alt="rain"
+              style={{
+                
+                height: "60px",
+                width: "60px",
+                marginRight:'-7px'
+              }}
+            />
+          }
+        />
       </Stack>
     </Stack>
   );
