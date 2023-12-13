@@ -12,7 +12,6 @@ const Weather = ({apiData}) => {
     // Handle the case when data is not available
     return <div>Loading...</div>;
   }
-
   return (
     <Stack direction="row">
       <Box p={2} sx={{ width: "300px", height: "90vh" }}>
@@ -24,7 +23,6 @@ const Weather = ({apiData}) => {
         >
           
         <span> {apiData.location.name} </span>
-
           <Typography
             variant="h6"
             sx={{ fontFamily: "Rubik", fontWeight: "600", color: "#9399A2ff" }}
@@ -39,7 +37,7 @@ const Weather = ({apiData}) => {
         <WeatherCard apiData={apiData}/>
         <AirConditionsCard apiData={apiData}/>
       </Box>
-      <Box sx={{visibility:{md:'collapse',sm:'collapse',xm:'collapse',xl:'visible' ,lg:'visible'}}} >
+      <Box sx={{visibility:{md:'collapse',sm:'collapse',xs:'collapse',xl:'visible' ,lg:'visible'}}} >
       <Sevendayforecast />
       </Box>
      

@@ -1,7 +1,23 @@
-import { Input,  Stack } from '@mui/material'
-import React from 'react'
+import { Input,   Stack } from '@mui/material'
+import { useState } from 'react';
+import Searched from './Searched';
+import { useNavigate } from 'react-router-dom';
+
 
 const SearchBar = () => {
+const[searchTerm,setSearchTerm]=useState('')
+const navigate = useNavigate();
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      // Trigger the search when Enter key is pressed
+      handleSearch();
+    }
+  };
+  const handleSearch = () => {
+    // Use navigate to navigate to a new route
+    navigate(`/${searchTerm}`);
+  };
+
   return (
  
     <Stack
@@ -17,14 +33,21 @@ const SearchBar = () => {
       pl: 2,
       width:{lg:'960px',sm:'360px', md:'710px',xs:'360px'}
     }}
+    direction='row'
   >
-    <Input placeholder="Search for Cities" disableUnderline={true} sx={{
+    
+    <Input   onKeyDown={handleKeyPress} value={searchTerm}   onChange={(e)=>setSearchTerm(e.target.value)} placeholder="Search for Cities" disableUnderline={true}
+  
+  
+    sx={{
 bgcolor: "#202B3B", // Changed the bgcolor
 borderRadius: 5,
 color: 'white', // Set text color for the placeholder
 }} />
+
+  
   </Stack>
-    
+   
   )
 }
 

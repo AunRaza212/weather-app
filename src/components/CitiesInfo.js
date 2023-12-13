@@ -37,7 +37,7 @@ const CitiesInfo = ({city,temperature,time}) => {
         src={sun}
       />
 
-      <Box sx={{ mt: "30px",width:'140px' }}>
+      <Box sx={{ mt: "30px",width:{xl:'140px',lg:'140px',md:'500px',sm:'400px',xs:'500px'} }}>
         <Typography
           color="#dde0e4ff"
           marginLeft="5px"

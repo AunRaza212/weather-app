@@ -20,6 +20,7 @@ const SideBar = ({ setSelectedCategory,selectedCategory }) => {
       alignItems='center'
     >
       {categories.map((category) => (
+      
         <button
           onClick={() => setSelectedCategory(category.name)}
           className={`sidebar sidebar:hover ${selectedCategory === category.name && 'active'  }` }
@@ -31,7 +32,9 @@ const SideBar = ({ setSelectedCategory,selectedCategory }) => {
             {category.name}
           </span>
         </button>
+        
       ))}
+    
     </Stack>
   );
 };

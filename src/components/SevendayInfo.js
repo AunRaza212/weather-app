@@ -9,7 +9,7 @@ const SevendayInfo = ({ borderBottom, p, date, sunny }) => {
     >
      
      
-      <Stack direction="row"  display='flex' justifyContent='space-between' > {date} {sunny}</Stack>
+      <Stack direction="row"  display='flex' fontWeight={600} justifyContent='space-between' color='#9399a2'> {date} {sunny}</Stack>
     </Stack>
   );
 };

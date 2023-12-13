@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import SevendayInfo from "./SevendayInfo";
 
 
-const Sevendayforecast = ({ apiData }) => {
+const Sevendayforecast = () => {
   return (
     <Stack
       direction="column"
