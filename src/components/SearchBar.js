@@ -1,6 +1,6 @@
 import { Input,   Stack } from '@mui/material'
 import { useState } from 'react';
-import Searched from './Searched';
+
 import { useNavigate } from 'react-router-dom';
 
 
