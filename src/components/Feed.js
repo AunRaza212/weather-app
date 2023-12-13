@@ -1,69 +1,74 @@
 import React, { useState } from "react";
-import { Box,  Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import SideBar from "./SideBar";
 import Cities from "./Cities";
 import Weather from "./Weather";
 import Settings from "./Settings";
 import { useApiData } from "./ApiContext";
-import Map from './Map'
+import Map from "./Map";
 const Feed = () => {
-
   // const MainFeed =()=>
   //   <MainFeed/>
   const [selectedCategory, setSelectedCategory] = useState("");
 
-const apiData = useApiData()
+  const apiData = useApiData();
 
-if (!apiData) {
-  return <div>Loading...</div>;
-}
-
+  if (!apiData) {
+    return <div>Loading...</div>;
+  }
 
   const renderComponentByCategory = () => {
     switch (selectedCategory) {
       case "Weather":
-        return <Weather apiData={apiData}/>;
+        return <Weather apiData={apiData} />;
       case "Cities":
         return <Cities apiData={apiData} />;
-        case "Settings":
-          return <Settings />;
-          case 'Map':
-            return <Map/>;
+      case "Settings":
+        return <Settings />;
+      case "Map":
+        return <Map />;
       case "":
-        return <Weather apiData={apiData}/>;
-        
+        return <Weather apiData={apiData} />;
+
       // Add cases for other categories as neede
       default:
         return null;
     }
   };
-  
 
   return (
-
-    <Stack direction="row" overflow='clip'>
-
-    <Box
+    <Stack
+      direction="row"
       sx={{
-        height: { sx: "auto", md: "92vh" },
-        borderRight: {lg:"1px solid #3d3d3d",sm:false,xs:false},
-        px: { sx: 0, md: 2 },
-       
+        width: {
+          xl: "1920px",
+          lg: "1201px",
+          md: "901px",
+          sm: "601px",
+          xs: "500px",
+        },
       }}
     >
-      <SideBar setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory} />
-    </Box>
+      <Box
+        sx={{
+          height: { sx: "auto", md: "92vh" },
+          borderRight: { lg: "1px solid #3d3d3d", sm: false, xs: false },
+          px: { sx: 0, md: 2 },
+        }}
+      >
+        <SideBar
+          setSelectedCategory={setSelectedCategory}
+          selectedCategory={selectedCategory}
+        />
+      </Box>
 
-    {renderComponentByCategory()}
+      {renderComponentByCategory()}
     </Stack>
-
-
-
   );
 };
 
 export default Feed;
-//   const 
+//   const
 // // useEffect(() => {
 // //   const fetchDataFromAPI = async () => {
 // //     try {
@@ -82,11 +87,10 @@ export default Feed;
 // //   fetchDataFromAPI();
 // // }, []);
 
-  /* {weatherData && weatherData.data.length > 0 &&(<Typography sx={{ color: "white" }} variant="h4">
+/* {weatherData && weatherData.data.length > 0 &&(<Typography sx={{ color: "white" }} variant="h4">
       {weatherData.data[0].city_name}
       {weatherData.data[0].temp}°C
       </Typography>)} */
-
 
 /* <button onClick={MainFeed} >
 Get started

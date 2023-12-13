@@ -15,7 +15,6 @@ const WeatherCard = ({ apiData }) => {
         borderRadius: 5,
         backgroundColor: "rgb(32,43,59)",
         overflow:'clip',
-
       }}
       direction="column"
     >
@@ -25,8 +24,7 @@ const WeatherCard = ({ apiData }) => {
 
       <Stack direction="row" p={2}>
         <WeatherSingleInfo
-        
-          
+
           time="6:00am"
           clouds={apiData.forecast.forecastday[0].hour[6].condition.text}
           temp={apiData.forecast.forecastday[0].hour[6].temp_c}
