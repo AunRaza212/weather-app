@@ -4,7 +4,6 @@ import WeatherCard from './WeatherCard'
 import AirConditionsCard from './AirConditionsCard'
 import { fetchData } from '../utils/fetchData'
 import { useParams } from 'react-router-dom'
-import SideBar from './SideBar'
 const Searched = () => {
     const { searchTerm } = useParams();
     const [apiData, setApiData] = useState(null);
