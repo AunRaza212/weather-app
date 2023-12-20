@@ -13,8 +13,8 @@ const AirConditionsInfo = ({apiData}) => {
           <Stack key={icons.name} direction="row">
             <Box   mt="3px" color='#9399a2'>
               {icons
-                .filter((value) => value.name === "thermometer")
-                .map((value) => <Box key={icons.name} >{value.icon}</Box>)}
+                .filter((value) =>  value.name === "thermometer")
+                .map((value) => <Box key={value.name} >{value.icon}</Box>)}
             </Box>
             <Typography fontSize='20px' color='#9399a2'>
               Real Feel <br />{" "}
@@ -40,7 +40,7 @@ const AirConditionsInfo = ({apiData}) => {
           <Box  mt="3px" color='#9399a2' >
             {icons
               .filter((value) => value.name === "wind")
-              .map((value) => <Box key={icons.name} >{value.icon}</Box>)}
+              .map((value) => <Box key={value.name} >{value.icon}</Box>)}
           </Box>
           <Typography color='#9399a2' fontSize='20px'>Wind <br/>   <span
                 style={{
@@ -64,7 +64,7 @@ const AirConditionsInfo = ({apiData}) => {
           <Box mt="3px" color='#9399a2' >
             {icons
               .filter((value) => value.name === "waterDrop")
-              .map((value) => <Box key={icons.name} >{value.icon}</Box>)}
+              .map((value) => <Box key={value.name} >{value.icon}</Box>)}
           </Box>
           <Typography fontSize='20px'color='#9399a2'>Humidity <br/>   <span
                 style={{
@@ -85,7 +85,7 @@ const AirConditionsInfo = ({apiData}) => {
             {icons
             
               .filter((value) => value.name === "UV")
-              .map((value) => <Box key={icons.name} >{value.icon}</Box>)}
+              .map((value) => <Box key={value.name} >{value.icon}</Box>)}
           </Box>
           <Typography fontSize='20px' color='#9399a2'>UV <br/>   <span
                 style={{

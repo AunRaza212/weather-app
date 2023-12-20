@@ -4,7 +4,7 @@ const WeatherSingleInfo = ({  borderRight, time, temp, clouds }) => {
     <Stack
       mt={-5}
       spacing={{ xs: 1, sm: 2 }}
-      sx={{ borderRight, p: { lg: 5, xs: 3, md: 3, sm: 3 } }}
+      sx={{ borderRight, p: { lg: 5, xs: 3, md: '20px', sm: '20px' } }}
     >
       <Box
         color="#9399a2"

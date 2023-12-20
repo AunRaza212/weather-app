@@ -15,24 +15,25 @@ const Weather = ({apiData}) => {
   return (
     <Stack direction="row">
       <Box p={2} sx={{ width: "300px", height: "90vh" }}>
-         <Typography
-          sx={{ fontWeight: "600", color: "#dde0e4", ml: "50px", mt: "15px" }}
-          variant="h3"
+      <Typography
+          sx={{ fontWeight: "600", color: "#dde0e4", ml: "30px", mt: "15px",mb:'0px' }}
+         variant="h3"
           fontFamily="Rubik"
           mb="40px"
         >
+           <span> {apiData.location.name} </span>
+           </Typography>
+       
+       
+         <Typography variant="h6"   >
+         <span style={{fontFamily:'Rubik',marginLeft:'30px',fontWeight:'600',color:'#9399a2'}} > Humidity: {apiData.current.humidity}%</span>
+         </Typography>
+         <Typography variant="h3" mt='70px' mb='30px' >
+         <span style={{ fontFamily:'Rubik',fontWeight: "600", color: "#dde0e4",marginLeft:'30px' }}>{apiData.current.temp_c}°C</span>
+         </Typography>
           
-        <span> {apiData.location.name} </span>
-          <Typography
-            variant="h6"
-            sx={{ fontFamily: "Rubik", fontWeight: "600", color: "#9399A2ff" }}
-          >
-            <span> Humidity: {apiData.current.humidity}%</span>
-          </Typography>
-          <Box mt={7}>
-            <span>{apiData.current.temp_c}°C</span>
-          </Box>
-        </Typography>
+          
+       
 
         <WeatherCard apiData={apiData}/>
         <AirConditionsCard apiData={apiData}/>
