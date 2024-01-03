@@ -22,7 +22,7 @@ const AirConditionsInfo = ({apiData}) => {
                 style={{
                   fontFamily: "Rubik",
                   fontWeight: "600",
-                  fontSize: "28px",
+                  
                   color: "#c4cad3",
                 }}
               >
@@ -46,7 +46,7 @@ const AirConditionsInfo = ({apiData}) => {
                 style={{
                   fontFamily: "Rubik",
                   fontWeight: "600",
-                  fontSize: "28px",
+                  
                   color: "#c4cad3",
                 }}
               >
@@ -70,7 +70,7 @@ const AirConditionsInfo = ({apiData}) => {
                 style={{
                   fontFamily: "Rubik",
                   fontWeight: "600",
-                  fontSize: "28px",
+                 
                   color: "#c4cad3",
                 }}
               >{apiData.current.humidity}%</span> </Typography>
@@ -91,7 +91,7 @@ const AirConditionsInfo = ({apiData}) => {
                 style={{
                   fontFamily: "Rubik",
                   fontWeight: "600",
-                  fontSize: "28px",
+                 
                   color: "#c4cad3",
                 }}
               >{apiData.current.uv}</span> </Typography>

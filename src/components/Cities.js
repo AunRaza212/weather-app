@@ -68,24 +68,22 @@ const Cities = () => {
           },
         }}
       >
-        <Typography
-          sx={{ fontWeight: "600", color: "#dde0e4", ml: "50px", mt: "15px" }}
-          variant="h3"
+     <Typography
+          sx={{ fontWeight: "600", color: "#dde0e4", ml: "30px", mt: "15px",mb:'0px' }}
+         variant="h3"
           fontFamily="Rubik"
           mb="40px"
         >
-          <span> {apiData["Karachi"].location.name} </span>
-
-          <Typography
-            variant="h6"
-            sx={{ fontFamily: "Rubik", fontWeight: "600", color: "#9399A2ff" }}
-          >
-            <span>Humidity: {apiData["Karachi"].current.humidity}%</span>
-          </Typography>
-          <Box mt="35px">
-            <span>{apiData["Karachi"].current.temp_c}°C</span>
-          </Box>
-        </Typography>
+           <span> {apiData['Karachi'].location.name} </span>
+           </Typography>
+       
+       
+         <Typography variant="h6"   >
+         <span style={{fontFamily:'Rubik',marginLeft:'30px',fontWeight:'600',color:'#9399a2'}} > Humidity: {apiData['Karachi'].current.humidity}%</span>
+         </Typography>
+         <Typography variant="h3" mt='70px' mb='30px' >
+         <span style={{ fontFamily:'Rubik',fontWeight: "600", color: "#dde0e4",marginLeft:'30px' }}>{apiData['Karachi'].current.temp_c}°C</span>
+         </Typography>
         <TodaysForecast apiData={apiData["Karachi"]} />
       </Box>
     </Stack>
